@@ -31,115 +31,115 @@ var quizQuestions= [
     },
     //question 3
     {
-        "question": "",
+        "question": "what will the following method log? console.log(('b' + 'a' + + 'a' + 'a').to LowerCase());",
 
-        "a1" : "",
+        "a1" : "banana",
 
-        "a2" : "",
+        "a2" : "baaa",
 
-        "a3" : "",
+        "a3" : "bananaa",
 
-        "a4" : "",
+        "a4" : "ananas",
 
-        "ca" : ""
+        "ca" : "a1"
     },
     //question 4
     {
-        "question": "",
+        "question": "JavaScript is a ___ -side programming language.",
 
-        "a1" : "",
+        "a1" : "Client",
 
-        "a2" : "",
+        "a2" : "Server",
 
-        "a3" : "",
+        "a3" : "Both",
 
-        "a4" : "",
+        "a4" : "None",
 
-        "ca" : ""
+        "ca" : "a3"
     },
     //question 5
     {
-        "question": "",
+        "question": "What is the correct 'if' statement to execute certain code if 'x' is equal to 2?",
 
-        "a1" : "",
+        "a1" : "if (x!=2)",
 
-        "a2" : "",
+        "a2" : "if (x=2)",
 
-        "a3" : "",
+        "a3" : "if (x==2)",
 
-        "a4" : "",
+        "a4" : "if (x2)",
 
-        "ca" : ""
+        "ca" : "a3"
     },
     //question6
     {
-        "question": "",
+        "question": "Which of the following functions of Boolean objects, returns a string of either 'true' or 'false' depending upon the value of the object?",
 
-        "a1" : "",
+        "a1" : "valueOf()",
 
-        "a2" : "",
+        "a2" : "toSource()",
 
-        "a3" : "",
+        "a3" : "toString()",
 
-        "a4" : "",
+        "a4" : "None of the above.",
 
-        "ca" : ""
+        "ca" : "a3"
     },
     //question 7
     {
-        "question": "",
+        "question": "Which operator is used for comparing values and data types?",
 
-        "a1" : "",
+        "a1" : "=",
 
-        "a2" : "",
+        "a2" : "==",
 
-        "a3" : "",
+        "a3" : "===",
 
-        "a4" : "",
+        "a4" : "=+=",
 
-        "ca" : ""
+        "ca" : "a3"
     },
     //question 8
     {
-        "question": "",
+        "question": "Which of the following represent falsy values in javascript",
 
-        "a1" : "",
+        "a1" : "false",
 
-        "a2" : "",
+        "a2" : "undefined",
 
-        "a3" : "",
+        "a3" : "''",
 
-        "a4" : "",
+        "a4" : "All of the above",
 
-        "ca" : ""
+        "ca" : "a4"
     },
     //question 9
     {
-        "question": "",
+        "question": "What is the role of continue keyword inside a loop",
 
-        "a1" : "",
+        "a1" : "Ignore the rest of the statements below it and continue the loop",
 
-        "a2" : "",
+        "a2" : "Break out of the loop",
 
-        "a3" : "",
+        "a3" : "Restart the loop",
 
-        "a4" : "",
+        "a4" : "None of the above",
 
-        "ca" : ""
+        "ca" : "a1"
     },
     //question 10
     {
-        "question": "",
+        "question": "Where did JavaScript get its name?",
 
-        "a1" : "",
+        "a1" : "It's a faster, lighter version of JAVA",
 
-        "a2" : "",
+        "a2" : "It's a type of Coffee script",
 
-        "a3" : "",
+        "a3" : "JAVA was cool at the time JavaScript was created",
 
-        "a4" : "",
+        "a4" : "It follows some of JAVA's syntax",
 
-        "ca" : ""
+        "ca" : "a4"
     },
 
 ];
