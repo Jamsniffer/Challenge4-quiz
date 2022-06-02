@@ -1,0 +1,95 @@
+/*start page css*/
+body {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+    
+}
+body h1 {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+    
+}
+
+body p {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+}
+
+body button {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    margin: auto;
+}
+
+/*questions page css*/
+
+body h2 {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    margin: auto;
+
+}
+
+body div {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin: auto;
+} 
+
+body div input {
+    display: inline-flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin: auto;
+}
+
+body div span {
+    display: inline-flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin: 10px;
+
+    margin-bottom: 10px;
+}

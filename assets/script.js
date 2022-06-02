@@ -1,5 +1,9 @@
-var questionCount = 0;
+var questionCount = 9;
 var timer = 600000;
+var NO_OF_HIGH_SCORES = 10;
+var HIGH_SCORES = "highScores";
+var highScoreString = localStorage.getItem(HIGH_SCORES);
+var highScores = JSON.parse(highScoreString) ?? [];
 var quizQuestions= [
     //question 1
     {
@@ -144,6 +148,8 @@ var quizQuestions= [
 
 ];
 
+//remove all html elements and run create questions function
+
 function createQuizPage() {
 
     while (document.body.firstChild && document.body.children.length > 1) {
@@ -160,6 +166,8 @@ function createQuizPage() {
 
 }
 
+//create quiz question and answers
+
 function createQuestions() {
     var messageAppended = false;
     var qcIncremented=false;
@@ -168,8 +176,10 @@ function createQuestions() {
     var minutes = Math.floor((timer % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timer % (1000 * 60)) / 1000);
 
+    //quiz end and highscore and initals save
     if (questionCount>=10 ) {
-        var highScore= timer;
+        score = timer;
+        checkHighScore(score)
         createEndPage();
     }
 
@@ -255,13 +265,52 @@ function createQuestions() {
     //document.getElementById("submit").addEventListener("click",createQuizPage);
     
 
-}
+};
+
 function createEndPage() {
+    var highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
     var endPage = document.createElement("div");
     endPage.setAttribute("id", "end-page");
-    endPage.innerHTML = "it worked!";
+    console.log(highScores)
+    endPage.innerHTML = highScores.map((score) => '<li>${score.score} - ${score.name}'); 
     document.body.appendChild(endPage);
 
+};
+
+//check to see if score is good enough to be on highscore list
+
+function checkHighScore(score) {
+    var highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+    var lowestScore = highScores[NO_OF_HIGH_SCORES-1]?.scores ?? 0;
+
+    if (score > lowestScore) {
+
+        saveHighScore(score, highScores);
+        showHighScores();
+    }
+}
+
+//save high score to highscore list
+
+function saveHighScore() {
+    var name = prompt('You got a highscore! Enter your name or initials:');
+    var newScore = {score, name}
+    //add to list
+    highScores.push(newScore);
+    //sort new list
+    highScores.sort((a,b) => b.score - a.score);
+    //select new list
+    highScores.splice(NO_OF_HIGH_SCORES);
+    //save to local storage
+    localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
+};
+
+function showHighScores() {
+    var highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+    var highScoresList = document.createElement("div"); //document.getElementById(HIGH_SCORES);
+
+    //document.createElement("div")
+    highScoresList.innerHTML = highScores.map((score) => '${score.score} - ${score.name}').join("");
 }
 
 document.getElementById("submit").addEventListener("click",createQuizPage);
