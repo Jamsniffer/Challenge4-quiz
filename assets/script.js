@@ -1,4 +1,4 @@
-var questionCount = 9;
+var questionCount = 0;
 var timer = 600000;
 var NO_OF_HIGH_SCORES = 10;
 var HIGH_SCORES = "highScores";
@@ -272,7 +272,7 @@ function createEndPage() {
     var endPage = document.createElement("div");
     endPage.setAttribute("id", "end-page");
     console.log(highScores)
-    endPage.innerHTML = highScores.map((score) => '<li>${score.score} - ${score.name}'); 
+    endPage.innerHTML = highScores.map((score) => '<li>Score: ' + score.score + " - " + score.name); 
     document.body.appendChild(endPage);
 
 };
